@@ -1,0 +1,979 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Getting Started with Litmus - Litmus Experiments</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pre-requisites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Litmus Experiments" class="md-header__button md-logo" aria-label="Litmus Experiments" data-md-component="logo">
+      
+  <img src="assets/litmus.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Litmus Experiments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started with Litmus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Litmus Experiments" class="md-nav__button md-logo" aria-label="Litmus Experiments" data-md-component="logo">
+      
+  <img src="assets/litmus.svg" alt="logo">
+
+    </a>
+    Litmus Experiments
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-litmus" class="md-nav__link">
+    Install Litmus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-chaos-experiments" class="md-nav__link">
+    Install Chaos Experiments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-service-account" class="md-nav__link">
+    Setup Service Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-chaosengine" class="md-nav__link">
+    Prepare ChaosEngine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-chaos-experiments-variables" class="md-nav__link">
+    Override Default Chaos Experiments Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-chaos" class="md-nav__link">
+    Run Chaos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observe-chaos-results" class="md-nav__link">
+    Observe Chaos results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstallation" class="md-nav__link">
+    Uninstallation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-chaos-experiments" class="md-nav__link">
+    More Chaos Experiments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#join-our-community" class="md-nav__link">
+    Join our community
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        AWS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ebs-loss/" class="md-nav__link">
+        Ebs loss
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ec2-stop/" class="md-nav__link">
+        EC2 Terminate By ID
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        AKS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AKS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AKS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aks-stop/" class="md-nav__link">
+        Aks stop
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        GCP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GCP" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          GCP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gcp-stop/" class="md-nav__link">
+        Instance Stop
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Pod
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pod" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Pod
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pod-delete/" class="md-nav__link">
+        Pod Delete
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Node
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node-restart/" class="md-nav__link">
+        Node Restart
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-litmus" class="md-nav__link">
+    Install Litmus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-chaos-experiments" class="md-nav__link">
+    Install Chaos Experiments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-service-account" class="md-nav__link">
+    Setup Service Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-chaosengine" class="md-nav__link">
+    Prepare ChaosEngine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-chaos-experiments-variables" class="md-nav__link">
+    Override Default Chaos Experiments Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-chaos" class="md-nav__link">
+    Run Chaos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observe-chaos-results" class="md-nav__link">
+    Observe Chaos results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstallation" class="md-nav__link">
+    Uninstallation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-chaos-experiments" class="md-nav__link">
+    More Chaos Experiments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#join-our-community" class="md-nav__link">
+    Join our community
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Home</h1>
+                
+                <hr />
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Kubernetes 1.15 or later.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Running chaos on your application involves the following steps:</p>
+<p><a href="#install-litmus">Install Litmus</a></p>
+<p><a href="#install-chaos-experiments">Install Chaos Experiments</a></p>
+<p><a href="#setup-service-account">Setup Service Account</a></p>
+<p><a href="#annotate-your-application">Annotate your application</a></p>
+<p><a href="#prepare-chaosengine">Prepare ChaosEngine</a></p>
+<p><a href="#run-chaos">Run Chaos</a></p>
+<p><a href="#observe-chaos-results">Observe ChaosResults</a></p>
+<hr>
+
+<h3 id="install-litmus">Install Litmus</h3>
+<p>Apply the LitmusChaos Operator manifest:</p>
+<pre><code>kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.13.8.yaml
+</code></pre>
+<p>The above command installs all the CRDs, required service account configuration, and chaos-operator. </p>
+<p><strong>Note</strong>: Ensure that you have the right privileges to install the CRDs &amp; setup cluster-wide RBAC policies (by default, the 
+ChaosOperator watches for Chaos CRs across namespaces)</p>
+<p>Alternatively, you can choose to install it with Helm:</p>
+<ul>
+<li>Add the LitmusChaos Helm repo</li>
+</ul>
+<pre><code>helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
+</code></pre>
+<ul>
+<li>Create a Litmus namespace in Kubernetes</li>
+</ul>
+<pre><code>kubectl create ns litmus
+</code></pre>
+<ul>
+<li>Install the Litmus Helm chart</li>
+</ul>
+<pre><code>helm install chaos litmuschaos/litmus --namespace=litmus
+</code></pre>
+<p><strong>Note</strong>: Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2.
+Before you start running a chaos experiment, verify if Litmus is installed correctly.</p>
+<p><strong>Verify your installation</strong></p>
+<ul>
+<li>Verify if the ChaosOperator is running</li>
+</ul>
+<pre><code>kubectl get pods -n litmus
+</code></pre>
+<p>Expected output:</p>
+<blockquote>
+<p>chaos-operator-ce-554d6c8f9f-slc8k             1/1         Running     0            6m41s</p>
+</blockquote>
+<ul>
+<li>Verify if chaos CRDs are installed</li>
+</ul>
+<pre><code>kubectl get crds | grep chaos
+</code></pre>
+<p>Expected output:</p>
+<blockquote>
+<p>chaosengines.litmuschaos.io             2019-10-02T08:45:25Z</p>
+<p>chaosexperiments.litmuschaos.io         2019-10-02T08:45:26Z</p>
+<p>chaosresults.litmuschaos.io             2019-10-02T08:45:26Z</p>
+</blockquote>
+<ul>
+<li>Verify if the chaos api resources are successfully created in the desired (application) namespace.</li>
+</ul>
+<p><em>Note</em>: Sometimes, it can take a few seconds for the resources to be available post the CRD installation</p>
+<pre><code>kubectl api-resources | grep chaos
+</code></pre>
+<p>Expected output:</p>
+<blockquote>
+<p>chaosengines                              litmuschaos.io               true     ChaosEngine</p>
+<p>chaosexperiments                                                  litmuschaos.io                           true         ChaosExperiment</p>
+<p>chaosresults                                                      litmuschaos.io                           true         ChaosResult</p>
+</blockquote>
+<p><strong>NOTE</strong>:</p>
+<ul>
+<li>In this guide, we shall describe the steps to inject pod-delete chaos on an nginx application already deployed in the
+nginx namespace. If you don't have this setup you can easily create one by running these two commands:</li>
+<li>Create nginx namespace <code>kubectl create ns nginx</code>.</li>
+<li>
+<p>Create nginx deployment in nginx namespace <code>kubectl create deployment nginx --image nginx -n nginx</code>.</p>
+</li>
+<li>
+<p>In all subsequent steps, please follow these instructions by replacing the nginx namespace and labels with that of your
+application.</p>
+</li>
+<li>
+<p>The ChaosOperator collects some usage metrics (operator installation count &amp; experiment run count) via a google analytics
+  hook. This is done in order to gather chaos trends that will help us to improve the project. However, if you would like to
+  prevent the collection of the same or are operating in an airgapped environment, you can disable it using the procedure
+  suggested <a href="https://docs.litmuschaos.io/docs/faq-general/#does-litmus-track-any-usage-metrics-on-the-test-clusters">here</a>.</p>
+</li>
+</ul>
+<h3 id="install-chaos-experiments">Install Chaos Experiments</h3>
+<p>Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes CRs.
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href=" https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.</p>
+<p>The generic chaos experiments such as <code>pod-delete</code>,  <code>container-kill</code>,<code>pod-network-latency</code> are available under Generic Chaos Chart.
+This is the first chart you are recommended to install.</p>
+<pre><code>kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/experiments.yaml -n nginx
+</code></pre>
+<p>Verify if the chaos experiments are installed.</p>
+<pre><code>kubectl get chaosexperiments -n nginx
+</code></pre>
+<h3 id="setup-service-account">Setup Service Account</h3>
+<p>A service account should be created to allow chaosengine to run experiments in your application namespace. Copy the following
+into a <code>rbac.yaml</code> manifest and run <code>kubectl apply -f rbac.yaml</code> to create one such account on the nginx namespace. This serviceaccount has just enough permissions needed to run the pod-delete chaos experiment.</p>
+<p><strong>NOTE</strong>:</p>
+<ul>
+<li>For rbac samples corresponding to other experiments such as, say, container-kill, please refer the respective experiment folder in
+the <a href="https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/container-kill">chaos-charts</a> repository.</li>
+</ul>
+<pre><code class="language-yaml">---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pod-delete-sa
+  namespace: nginx
+  labels:
+    name: pod-delete-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-delete-sa
+  namespace: nginx
+  labels:
+    name: pod-delete-sa
+rules:
+- apiGroups: [&quot;&quot;]
+  resources: [&quot;pods&quot;,&quot;events&quot;]
+  verbs: [&quot;create&quot;,&quot;list&quot;,&quot;get&quot;,&quot;patch&quot;,&quot;update&quot;,&quot;delete&quot;,&quot;deletecollection&quot;]
+- apiGroups: [&quot;&quot;]
+  resources: [&quot;pods/exec&quot;,&quot;pods/log&quot;,&quot;replicationcontrollers&quot;]
+  verbs: [&quot;create&quot;,&quot;list&quot;,&quot;get&quot;]
+- apiGroups: [&quot;batch&quot;]
+  resources: [&quot;jobs&quot;]
+  verbs: [&quot;create&quot;,&quot;list&quot;,&quot;get&quot;,&quot;delete&quot;,&quot;deletecollection&quot;]
+- apiGroups: [&quot;apps&quot;]
+  resources: [&quot;deployments&quot;,&quot;statefulsets&quot;,&quot;daemonsets&quot;,&quot;replicasets&quot;]
+  verbs: [&quot;list&quot;,&quot;get&quot;]
+- apiGroups: [&quot;apps.openshift.io&quot;]
+  resources: [&quot;deploymentconfigs&quot;]
+  verbs: [&quot;list&quot;,&quot;get&quot;]
+- apiGroups: [&quot;argoproj.io&quot;]
+  resources: [&quot;rollouts&quot;]
+  verbs: [&quot;list&quot;,&quot;get&quot;]
+- apiGroups: [&quot;litmuschaos.io&quot;]
+  resources: [&quot;chaosengines&quot;,&quot;chaosexperiments&quot;,&quot;chaosresults&quot;]
+  verbs: [&quot;create&quot;,&quot;list&quot;,&quot;get&quot;,&quot;patch&quot;,&quot;update&quot;]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-delete-sa
+  namespace: nginx
+  labels:
+    name: pod-delete-sa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pod-delete-sa
+subjects:
+- kind: ServiceAccount
+  name: pod-delete-sa
+  namespace: nginx
+</code></pre>
+<h3 id="prepare-chaosengine">Prepare ChaosEngine</h3>
+<p>ChaosEngine connects the application instance to a Chaos Experiment. Copy the following YAML snippet into a file called
+<code>chaosengine.yaml</code> and update the values of <code>applabel</code> , <code>appns</code>, <code>appkind</code> and <code>experiments</code> as per your choice.
+Change the <code>chaosServiceAccount</code> to the name of service account created in above previous steps.</p>
+<p><strong> NOTE:</strong> To learn more about the various fields in the ChaosEngine spec and their supported values, refer to <a href="https://docs.litmuschaos.io/docs/chaosengine/">Constructing ChaosEngine</a></p>
+<pre><code class="language-yaml">apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: nginx-chaos
+  namespace: nginx
+spec:
+  appinfo:
+    appns: 'nginx'
+    applabel: 'app=nginx'
+    appkind: 'deployment'
+  # It can be active/stop
+  engineState: 'active'
+  #ex. values: ns1:name=percona,ns2:run=nginx
+  auxiliaryAppInfo: ''
+  chaosServiceAccount: pod-delete-sa
+  # It can be delete/retain
+  jobCleanUpPolicy: 'delete'
+  experiments:
+    - name: pod-delete
+      spec:
+        components:
+          env:
+            # set chaos duration (in sec) as desired
+            - name: TOTAL_CHAOS_DURATION
+              value: '30'
+
+            # set chaos interval (in sec) as desired
+            - name: CHAOS_INTERVAL
+              value: '10'
+
+            # pod failures without '--force' &amp; default terminationGracePeriodSeconds
+            - name: FORCE
+              value: 'false'
+
+             ## percentage of total pods to target
+            - name: PODS_AFFECTED_PERC
+              value: ''
+</code></pre>
+<h3 id="override-default-chaos-experiments-variables">Override Default Chaos Experiments Variables</h3>
+<p>From LitmusChaos v1.1.0, the default environment variable values in chaosexperiments can be overridden by specifying
+them in the chaosengine under <code>experiments.&lt;experiment_name&gt;.spec.components.env</code> with the desired value. In the
+example below, the <code>TOTAL_CHAOS_DURATION</code> is being set to a desired value based on use-case.</p>
+<pre><code class="language-console">...
+experiments:
+    - name: pod-delete
+      spec:
+        components:
+          env:
+            - name: TOTAL_CHAOS_DURATION
+              value: '30'
+
+</code></pre>
+<h3 id="run-chaos">Run Chaos</h3>
+<p>Apply the ChaosEngine manifest to trigger the experiment.</p>
+<pre><code class="language-console">kubectl apply -f chaosengine.yaml
+</code></pre>
+<h3 id="observe-chaos-results">Observe Chaos results</h3>
+<p>Describe the ChaosResult CR to know the status of each experiment. The <code>status.verdict</code> is set to <code>Awaited</code> when the experiment is in progress, eventually changing to either <code>Pass</code> or <code>Fail</code>.</p>
+<p><strong> NOTE:</strong>  ChaosResult CR name will be <code>&lt;chaos-engine-name&gt;-&lt;chaos-experiment-name&gt;</code></p>
+<pre><code class="language-console">kubectl describe chaosresult nginx-chaos-pod-delete -n nginx
+</code></pre>
+<h2 id="uninstallation">Uninstallation</h2>
+<p>Firstly, delete any active ChaosEngines on the cluster, followed by the deletion of the Operator manifest.</p>
+<pre><code class="language-console">kubectl delete chaosengine --all -n &lt;namespace&gt;
+</code></pre>
+<pre><code class="language-console">kubectl delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.13.8.yaml
+</code></pre>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>Ensure that the chaosengine resources are deleted before removal of the chaos-operator deployment via operator manifest.
+  Failure to do so can cause the uninstall operation to be "stuck". Refer to the these <a href="https://docs.litmuschaos.io/docs/faq-troubleshooting/#litmus-uninstallation-is-not-successful-and-namespace-is-stuck-in-terminating-state">steps</a> to resolve this condition and complete the uninstall.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>For any issues experienced in running through the the aforementioned steps, refer to the <a href="https://docs.litmuschaos.io/docs/faq-troubleshooting/">Troubleshooting</a> section.</p>
+<h2 id="more-chaos-experiments">More Chaos Experiments</h2>
+<ul>
+<li>For more details on supported chaos experiments and the steps to run them, refer the respective <a href="https://docs.litmuschaos.io/docs/chaoshub/#generic-chaos">Experiment</a> docs.</li>
+</ul>
+<h2 id="join-our-community">Join our community</h2>
+<p>If you have not joined our community, do join us <a href="https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN">here</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="ebs-loss/" class="md-footer__link md-footer__link--next" aria-label="Next: Ebs loss" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Ebs loss
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+    
+  </body>
+</html>

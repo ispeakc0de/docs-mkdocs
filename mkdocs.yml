@@ -1,0 +1,21 @@
+site_name: Litmus Experiments
+theme: 
+  name: material
+  highlightjs: true
+  logo: assets/logo.png
+  hljs_languages:
+    - yaml
+nav:
+    - Home: index.md
+    - AWS: 
+        - ebs-loss.md
+        - ec2-stop.md
+    - AKS:
+      - instance:
+        - Instance Stop: aks-stop.md
+    - GCP:
+      - Instance Stop: gcp-stop.md
+    - Pod:
+      - Pod Delete: pod-delete.md
+    - Node:
+      - Node Restart: node-restart.md

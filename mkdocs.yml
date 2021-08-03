@@ -18,6 +18,7 @@ markdown_extensions:
       permalink: true
 nav:
     - Home: index.md
+    - 404: 404.md
     - AWS: 
         - resources/ebs-loss.md
         - resources/ec2-stop.md

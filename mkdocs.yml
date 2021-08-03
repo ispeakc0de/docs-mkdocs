@@ -1,21 +1,31 @@
 site_name: Litmus Experiments
 theme: 
   name: material
+  palette:
+    primary: blue
+  font:
+    text: Work Sans
   highlightjs: true
-  logo: assets/logo.png
+  logo: assets/litmus.png
   hljs_languages:
     - yaml
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - toc:
+      permalink: true
 nav:
-    - Home: index.md
+    - Home: resources/index.md
     - AWS: 
-        - ebs-loss.md
-        - ec2-stop.md
+        - resources/ebs-loss.md
+        - resources/ec2-stop.md
     - AKS:
-      - instance:
-          - aks-stop.md
+        - resources/aks-stop.md
     - GCP:
-      - Instance Stop: gcp-stop.md
+        - Instance Stop: resources/gcp-stop.md
     - Pod:
-      - Pod Delete: pod-delete.md
+        - Pod Delete: resources/pod-delete.md
     - Node:
-      - Node Restart: node-restart.md
+        - Node Restart: resources/node-restart.md

@@ -17,7 +17,7 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-    - Home: resources/index.md
+    - Home: index.md
     - AWS: 
         - resources/ebs-loss.md
         - resources/ec2-stop.md
